@@ -10,3 +10,11 @@ Send push notifications to any platform, from any backend. Use Notification Hubs
 - Target content to dynamic user segments
 - Achieve extreme scale
 
+##Windows Sample
+
+
+        azureNotificationHubs.register("<HubName>","<DefaultListenSharedAccessSignature>", function (result) {
+            document.getElementById("notificationid").innerHTML = result;
+        }, function () {
+            console.log("Plugin failed registering azure notification hubs");
+        });
