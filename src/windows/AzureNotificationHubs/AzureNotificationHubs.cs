@@ -32,7 +32,8 @@ namespace AzureNotificationHubs
         {
             var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
 
-            var hub = new NotificationHub("FollowIt", "Endpoint=sb://followit.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=E6JnUa6DSjoIPRX3JRUT4yyaESVaeaqiZ4xPLyXt/2c=");
+            
+            var hub = new NotificationHub(hubname, connectionString);
             var result = await hub.RegisterNativeAsync(channel.Uri);
 
             // Displays the registration ID so you know it was successful
