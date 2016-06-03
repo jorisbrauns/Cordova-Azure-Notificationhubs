@@ -46,16 +46,5 @@ namespace AzureNotificationHubs
             }
         }
 
-        //private static string Serialize(Type type, object obj)
-        //{
-        //    using (var stream = new MemoryStream())
-        //    {
-        //        var jsonSer = new DataContractJsonSerializer(type);
-        //        jsonSer.WriteObject(stream, obj);
-        //        stream.Position = 0;
-        //        return new StreamReader(stream).ReadToEnd();
-        //    }
-        //}
-
     }
 }
