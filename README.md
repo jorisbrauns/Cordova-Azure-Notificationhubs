@@ -1,6 +1,8 @@
 # Cordova-Azure-Notificationhubs
 This Cordova plugin offers support to receive and handle native push notifications from Azure Notification Hubs with a single unified API, and with no dependency on any other plugins.
 
+- [License (MIT)](MIT-LICENSE)
+
 Send push notifications to any platform, from any backend. Use Notification Hubs to:
 - Reach all major platforms including iOS, Android, Windows
 - Use with any backend, .NET, Java, PHP, or Python, cloud or on-premises
