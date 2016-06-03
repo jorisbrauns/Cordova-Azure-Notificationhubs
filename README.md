@@ -12,9 +12,8 @@ Send push notifications to any platform, from any backend. Use Notification Hubs
 
 ##Windows Sample
 
-
         azureNotificationHubs.register("<HubName>","<DefaultListenSharedAccessSignature>", function (result) {
-            document.getElementById("notificationid").innerHTML = result;
+                document.getElementById("notificationid").innerHTML = result;
         }, function () {
-            console.log("Plugin failed registering azure notification hubs");
+                console.log("Plugin failed registering azure notification hubs");
         });
