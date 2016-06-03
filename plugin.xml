@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordova-azure-notificationhubs"
+        version="1.0.0">
+
+  <name>Azure Notification Hubs</name>
+
+  <engines>
+    <engine name="cordova" version=">=6.2.0"/>
+  </engines>
+  <license>Apache</license>
+  <description>
+  Send push notifications to any platform, from any backend. Use Notification Hubs to:
+- Reach all major platforms including iOS, Android, Windows
+- Use with any backend, .NET, Java, PHP, or Python, cloud or on-premises
+- Broadcast push notifications to millions of users at once or tailor notifications to individual users
+- Tailor notifications by audience, language, location, and other personal preferences
+- Scale instantly to millions of devices
+- Target content to dynamic user segments
+- Achieve extreme scale
+  </description>
+  
+  <keywords>cordova, azure, push notifications, event hub</keywords>
+	
+  <asset src="www/contract.js" target="js/contract.js"/>
+
+  <js-module src="www/contract.js" name="azureNotificationHubs">
+    <clobbers target="azureNotificationHubs" />
+  </js-module>
+
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Hello">
+        <param name="android-package" value="org.apache.cordova.example.Hello"/>
+      </feature>
+    </config-file>
+    <source-file src="src/android/Hello.java" target-dir="src/org/apache/cordova/example"/>
+  </platform>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/widget">
+      <feature name="Hello">
+        <param name="ios-package" value="HWPHello" />
+      </feature>
+    </config-file>
+    <header-file src="src/ios/HWPHello.h" target-dir="HelloPlugin"/>
+    <source-file src="src/ios/HWPHello.m" target-dir="HelloPlugin"/>
+  </platform>
+
+  <platform name="windows">
+    <js-module src="src/windows/notificationHubsProxy.js" name="notificationHubsProxy">
+      <runs />
+    </js-module>
+    <framework src="src/windows/Microsoft.WindowsAzure.Messaging.Managed.dll" custom="true" />
+    <framework src="src/windows/AzureNotificationHubs.winmd" custom="true"/>
+  </platform>
+
+</plugin>
