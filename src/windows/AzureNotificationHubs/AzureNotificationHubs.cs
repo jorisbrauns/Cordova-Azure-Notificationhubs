@@ -11,12 +11,13 @@ namespace AzureNotificationHubs
 
         private static TaskCompletionSource<string> completionSource = new TaskCompletionSource<string>();
 
+        // Public api entrypoint
         public static IAsyncOperation<string> register(string hubname, string connectionString)
         {
-            return RegisterNotificationHub(hubname, connectionString).AsAsyncOperation();
+            return RegisterNotificationHubs(hubname, connectionString).AsAsyncOperation();
         }
 
-        private static async Task<string> RegisterNotificationHub(string hubname, string connectionString)
+        private static async Task<string> RegisterNotificationHubs(string hubname, string connectionString)
         {
             completionSource = new TaskCompletionSource<string>();
 
