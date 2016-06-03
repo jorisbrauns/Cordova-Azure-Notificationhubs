@@ -20,6 +20,7 @@ Send push notifications to any platform, from any backend. Use Notification Hubs
 
 ### Important!
 Make sure to configure your build.json with the following information (replace path with your own certificate and publisherid):
+
         "windows": {
                 "release": {
                     "packageCertificateKeyFile": "res\\native\\windows\\CordovaApp.pfx",
@@ -29,4 +30,4 @@ Make sure to configure your build.json with the following information (replace p
                     "packageCertificateKeyFile": "res\\native\\windows\\CordovaApp.pfx",
                     "publisherId": "<replace with your publisherId>"
                 }
-            }
+        }
