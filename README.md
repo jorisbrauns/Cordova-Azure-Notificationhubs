@@ -12,6 +12,8 @@ Send push notifications to any platform, from any backend. Use Notification Hubs
 - Target content to dynamic user segments
 - Achieve extreme scale
 
+[Notification hubs documentation](https://azure.microsoft.com/en-us/documentation/services/notification-hubs/)
+
 ##Universal Windows Platform Sample
 Before you're app is able to retreive push notifications from the Azure Notification Hubs you need to associate the app with the Windows Store and configure the WNS in Azure.
 
