@@ -17,3 +17,16 @@ Send push notifications to any platform, from any backend. Use Notification Hubs
         }, function () {
                 console.log("Plugin failed registering azure notification hubs");
         });
+
+### Important!
+Make sure to configure your build.json with the following information (replace path with your own certificate and publisherid):
+        "windows": {
+                "release": {
+                    "packageCertificateKeyFile": "res\\native\\windows\\CordovaApp.pfx",
+                    "publisherId": "<replace with your publisherId>"
+                },
+                "debug": {
+                    "packageCertificateKeyFile": "res\\native\\windows\\CordovaApp.pfx",
+                    "publisherId": "<replace with your publisherId>"
+                }
+            }
