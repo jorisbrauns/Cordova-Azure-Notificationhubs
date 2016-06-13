@@ -1,10 +1,7 @@
-﻿cordova.commandProxy.add("notificationHubs", {
+﻿cordova.commandProxy.add("NotificationHubs", {
     register: function (successCallback, errorCallback, args) {
-        if (args.length != 2) {
-            errorCallback("Incorrect arguments");
-            return;
-        }
-        AzureNotificationHubs.AzureNotificationHubs.register(args[0], args[1]).done(function(result){
+        
+        AzureNotificationHubs.AzureNotificationHubs.register(args.hubnane, args.endpoint).done(function(result){
             successCallback(result);
         }); 
     }

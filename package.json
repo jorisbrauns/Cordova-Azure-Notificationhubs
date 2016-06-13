@@ -34,7 +34,7 @@
     }
   ],
   "author": "Joris Brauns",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jorisbrauns/Cordova-Azure-Notificationhubs/issues"
   },
