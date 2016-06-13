@@ -21,7 +21,7 @@
 */
 
 using System;
-using Windows.Networking.NotificationHubss;
+using Windows.Networking.PushNotifications;
 using Microsoft.WindowsAzure.Messaging;
 using Windows.Foundation;
 using System.Threading.Tasks;
@@ -49,7 +49,7 @@ namespace AzureNotificationHubs
 
         private static async void RegisterHub(string hubname, string connectionString)
         {
-            var channel = await NotificationHubsChannelManager.CreateNotificationHubsChannelForApplicationAsync();
+            var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
 
             var hub = new NotificationHub(hubname, connectionString);
             var result = await hub.RegisterNativeAsync(channel.Uri);
